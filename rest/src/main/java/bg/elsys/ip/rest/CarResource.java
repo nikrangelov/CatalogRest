@@ -14,7 +14,11 @@ import javax.ws.rs.core.Response;
 import bg.elsys.ip.rest.data.CarsData;
 import bg.elsys.ip.rest.types.*;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @Path("/cars")
+@Api(value = "Api for querying cars")
 public class CarResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
