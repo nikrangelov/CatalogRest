@@ -19,6 +19,14 @@ import io.swagger.annotations.ApiOperation;
 @Path("/cars")
 @Api(value = "Api for querying cars")
 public class CarResource {
+	
+	@GET
+	@Path("/test")
+	@ApiOperation(value = "get  all cars")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getCars(){
+		return "Just a simple test!";
+	}
 
 	@GET
 	@ApiOperation(value = "get  all cars")
@@ -37,7 +45,9 @@ public class CarResource {
 			@DefaultValue("0") @QueryParam("minPrice") int withMinPrice,
 			@DefaultValue("1000000000")@QueryParam("maxPrice") int withMaxPrice) {
 		
-		System.out.println(withMaxPrice);
+		//withManufacturer = "Mercedes";
+		//withModel = "E Class";
+		System.out.println(withMaxYear);
 
 		CarService carService = CarService.getInstance();
 		PagedResponse carsInPages = carService.getCarsInPagesFiltered(

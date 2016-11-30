@@ -71,6 +71,21 @@
 		<!--   <table id="carsTable"></table> -->
 		<!-- --------------------------------------
 		 -->
+		 Filter:
+		 <br>
+	Car maker: <input type="text" name="maker" id="maker"><br>
+	Model: <input type="text" name="model" id="model"><br>
+	transmission: <input type="text" name="transm" id="transm"><br>
+	Engine: <input type="text" name="engine" id="engine"><br>
+	From Year: <input type="number" name="minYear" id="minYear"><br>
+	<!-- To Year: <input type="number" name="maxYear" id="maxYear"><br> -->
+	Min Milleage: <input type="number" name="minKm" id="milleage"><br>
+	<!-- Max Milleage: <input type="number" name="maxKm" id="milleage"><br> -->
+	Min Price (euro): <input type="number" name="minPrice" id="price"><br>
+	<!-- Max Price (euro): <input type="number" name="maxPrice" id="price"><br> -->
+	<button id="filter_btn">Filter</button>
+		 
+		 
 		<table class="table table-striped">
   <thead>
     <tr>
@@ -86,6 +101,9 @@
   <tbody id="carsTable">
   </tbody>
 </table>
+	<button id="prev_btn">Prev</button>
+	<button id="next_btn">Next</button>
+	<div id="page-display"></div>
 		<!-- -------------------------------------- -->
 		</div>
 	</div>
