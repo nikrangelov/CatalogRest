@@ -36,9 +36,19 @@ function getData() {
 		dataType: "json",
 		success: function(data) {
 			console.log(data);
-			var car;
-			for(car in data.data)
-			console.log(car.engine);
+			$.each(data.data, function(index){
+				console.log(data.data[index].engine);
+				var tr = $('<tr>');
+				tr.append("<td> " + data.data[index].manufacturer + "</td>");
+				tr.append("<td> " + data.data[index].model + "</td>");
+				tr.append("<td> " + data.data[index].transmission  + "</td>");
+				tr.append("<td> " + data.data[index].engine + "</td>");
+				tr.append("<td> " + data.data[index].year + "</td>");
+				tr.append("<td> " + data.data[index].milleage + "</td>");
+				tr.append("<td> " + data.data[index].price + "</td>");
+				tr.append("</tr>");
+				$("#carsTable").append(tr);
+			});
 		}
 	});
 }
