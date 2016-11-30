@@ -86,6 +86,7 @@ function getData() {
 
 $(document).ready(function() {
 		getData();
+		
 		$("#page-display").append("Page: " + gpage);
 		$("#filter_btn").click(function (){
 			$( "#carsTable" ).empty();

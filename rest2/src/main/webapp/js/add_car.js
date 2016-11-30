@@ -1,4 +1,3 @@
-
 function getData() {
 	$.ajax({
 		url: "http://localhost:8080/rst2/api/cars",
@@ -65,7 +64,7 @@ function postData() {
 
 $(document).ready(function() {
 	$('#add_btn').click(function() {
-		alert('button clicked');
+		alert('Product added');
 		postData();
 	});
 });
